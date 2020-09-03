@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cuda-basics.cpp">
+    <ClCompile Include="cpu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5e4034d3-e6e6-4095-920e-b5313b2318ab}</ProjectGuid>
-    <RootNamespace>cudabasics</RootNamespace>
+    <ProjectGuid>{8710d707-6a64-4018-bc11-454ae4004d68}</ProjectGuid>
+    <RootNamespace>cpu</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cuda-basics.cpp" />
+    <ClCompile Include="cpu.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

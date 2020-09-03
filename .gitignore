@@ -32,7 +32,12 @@
 *.app
 
 #Build Directories
-x64/*
+cpu/x64/*
+gpu/x64/*
 
-#Visual Studio Settings
+#Individual Visual Studio Project Settings
+cpu/.vs/*
+gpu/.vs/*
+
+#Visual Studio Workspace Settings
 .vs/*
