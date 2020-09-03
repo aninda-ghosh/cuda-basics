@@ -7,10 +7,14 @@
 #include <math.h>
 
 // Kernel function to add the elements of two arrays
+// Kernel Needs to be modified to make sure the parallalization happens 
+// For that I need thread id and the number of threads in that block
 __global__
 void add(int n, float* x, float* y)
 {
-    for (int i = 0; i < n; i++)
+    int index = threadIdx.x;
+    int stride = blockDim.x;
+    for (int i = 0; i < n; i += stride)
         y[i] = x[i] + y[i];
 }
 
@@ -30,7 +34,7 @@ int main(void)
     }
 
     // Run kernel on 1M elements on the GPU
-    add << <1, 1 >> > (N, x, y);
+    add << <1, 256>> > (N, x, y);
 
     // Wait for GPU to finish before accessing on host
     cudaDeviceSynchronize();
